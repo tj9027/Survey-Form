@@ -1,0 +1,87 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Survey Form</title>
+</head>
+
+<body>
+  <header class='header'>
+    <h1 id='title'> Feedback!</h1>
+    <p id='description'>what can I do to improve?</p>
+  </header>
+  <main class='main'>
+    <form class="jumbotron container" action="submit" id='survey-form'>
+      <div class="form-group row">
+        <label for="name" id="name-label" class="col-2 form-label">*Name</label>
+        <div class="col-10">
+          <input required type="text" class="form-control" id="name" placeholder='your name'>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="email" id="email-label" class="col-2 form-label">*Email</label>
+        <div class="col-10">
+          <input required type="email" class="form-control" id="email" placeholder='your email'>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="number" id="number-label" class="col-2 form-label">*Number</label>
+        <div class="col-10">
+          <input required type="number" min='0' max="100" class="form-control" id="number" placeholder='your number'>
+        </div>
+      </div>
+      <br>
+      <!--dropdown-->
+      <select class="custom-select" id="dropdown">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      <br>
+      <br>
+      <!--radio-->
+      <fieldset>
+        <legend>Radios</legend>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value='1'>
+          <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" value='2'>
+          <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
+        </div>
+
+      </fieldset>
+      <br>
+      <!--checkboxes-->
+      <fieldset>
+        <legend>Checkboxes</legend>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="checkbox1" value='3'>
+          <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="checkbox2" value='4'>
+          <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
+        </div>
+
+      </fieldset>
+      <!--textarea-->
+      <br>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Comments:</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <!--submit button-->
+      <button class="btn float-right btn-primary" id="submit" type="submit">Submit form</button>
+    </form>
+  </main>
+</body>
+
+</html>
